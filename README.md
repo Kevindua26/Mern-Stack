@@ -1,1 +1,1 @@
-Yaa so this is all my Mern Stack practice.
+This is all my Mern Stack practice.
