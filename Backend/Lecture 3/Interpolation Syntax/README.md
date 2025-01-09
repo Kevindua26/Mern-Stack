@@ -1,3 +1,3 @@
 ## interpolation Syntax
 
-Data in home.ejs and in the index.js
+Changes only in home.ejs line:11-14 and in the index.js line:15
