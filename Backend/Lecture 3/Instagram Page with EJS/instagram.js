@@ -18,6 +18,12 @@ app.get("/", (req, res) => {
     console.log("Request received for home");
 })
 
+app.get("/rolldice", (req,res) => {
+    let randNo = Math.floor(Math.random() * 6) + 1;
+
+    res.render('rolldice', { randNo });
+})
+
 app.get("/ip/:username", (req, res) => {
     let  username  = req.params.username;
     // let followers = ["kevin", "john", "james"];

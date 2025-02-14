@@ -1,0 +1,11 @@
+<%- include('includes/head.ejs') %>
+<body>
+    <h1>The no of dice is <%= randNo %></h1>
+    
+    <% if (randNo == 6) { %>
+        <h1>You won</h1>
+    <% } %>
+
+    <%- include('includes/footer.ejs') %>
+</body>
+</html>
