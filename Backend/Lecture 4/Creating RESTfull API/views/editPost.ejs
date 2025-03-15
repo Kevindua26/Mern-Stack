@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+    <title>Edit Post</title>
+</head>
+<body>
+    <h1 style="border-bottom: 2px solid  #141414;"><a href="http://localhost:3000/posts">Quora Posts</a></h1>
+
+    <h2><a href="http://localhost:3000/posts"><i id="backBtn" class="fa-solid fa-chevron-left"></i></a>Edit your post</h2>
+    <div id="editPostContainer">
+        <p>Post id: <%= post.id %></p>
+        <p>Post username: <%= post.username %></p><br>
+        <form method="post" action="/posts/<%= post.id %>?_method=PATCH">
+            <label for="content">Content:</label><br>
+            <textarea name="content" id="content"><%= post.content %></textarea>
+            <button>Done Changes</button>
+        </form>
+    </div>
+</body>
+</html>
