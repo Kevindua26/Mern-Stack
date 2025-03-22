@@ -23,12 +23,14 @@
 * Update
 * Alter
 * Tuncate
-* Delte
+* Delete
 * `SELECT * FROM table_name;` View Table
 
 <br>
 
 ```
+// to create table
+
 CREATE TABLE table_name (
     col-name1 datatype constraint,
     col-name1 datatype constraint, 
@@ -37,6 +39,8 @@ CREATE TABLE table_name (
 ```
 
 ```
+// to insert new row of data
+
 INSERT INTO table_name 
 (colname1, colname2, colname3...)
 VALUES
@@ -46,6 +50,53 @@ VALUES
     .
     .
     (val_col1, val_col2, valo_col3...);
+```
+
+```
+SET SQL_SAFE_UPDATES = 0; // if there's any error on updation
+
+// to update the data
+
+UPDATE table_name
+SET col1 = val1, col2 = val2
+WHERE [condition];
+```
+
+```
+// to alter the data 
+
+// add column
+ALTER TABLE table_name
+ADD COLUMN column-name datatype constraint;
+
+// drop column
+ALTER TABLE table_name
+drop COLUMN column_name;
+
+// rename table
+ALTER TABLE table_name
+RENAME TO new_table_name;
+
+// change column (rename)
+ALTER TABLE table_name
+CHANGE COLUMN old_name new_name datatypes new_constraint;
+
+// modify column (modify datatypes/constraint)
+ALTER TABLE table_name
+MODIFY col_name new_datatype new_constraint;
+```
+
+```
+// to truncate table
+
+TRUNCATE TABLE table_name;
+```
+
+```
+// to delete rows
+
+DELETE FROM table_name
+WHERE [condition];
 ```
 
 <br>
