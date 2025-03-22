@@ -21,9 +21,9 @@
 
 * `AND` to check both conditions to be true
 * `OR` to check for one of the condidtion to be true
-* `BETWEEN` to negate the given condition
+* `BETWEEN` select for a given range
 * `IN` matches any value in the list
-* `NOT` select for a given range
+* `NOT` to negate the given condition
 * `ALL`
 * `LIKE`
 * `ANY`
