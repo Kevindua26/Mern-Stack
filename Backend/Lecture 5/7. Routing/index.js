@@ -152,6 +152,7 @@ app.get('/user/add', (req, res) => {
   res.render("add.ejs");
 })
 
+// add route
 app.post('/user/add', (req, res) => {
   let { username, email, password } = req.body;
   let q = `insert into user (id, username, email, password) values ('${faker.string.uuid()}', '${username}', '${email}', '${password}')`;
