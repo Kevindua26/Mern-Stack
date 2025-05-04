@@ -1,0 +1,37 @@
+# DELETE in DB
+
+### deleteOne()
+
+```bash
+db.collection.deleteOne(<filter>, <option>)
+```
+```bash
+db.student.deleteOne( {name: "Farah"})
+{ acknowledged: true, deletedCount: 1 }
+```
+
+<br>
+
+### deleteMany()
+
+```bash
+db.collection.deleteMany(<filter>, <option>)
+
+db.student.deleteOne({}) //to delete all documents in the collection
+```
+```bash
+db.student.deleteOne( {city: "Mumbai"})
+{ acknowledged: true, deletedCount: 2 }
+```
+
+<br>
+
+### dropDatabase()
+
+```bash
+db.dropDatabase()
+```
+
+<br>
+
+[Click here](https://www.mongodb.com/docs/manual/tutorial/remove-documents/) for more info.

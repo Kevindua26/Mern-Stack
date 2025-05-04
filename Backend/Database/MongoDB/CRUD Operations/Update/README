@@ -1,0 +1,57 @@
+# UPDATE in db
+
+### Update Operators
+
+- `$addFields`
+- `$set`
+- `$project`
+- `$unset`
+- `$replaceRoot`
+- `$replaceWith`
+
+<br>
+
+### updateOne()
+
+Updates at most a single document that match a specified filter even through multiple documents may match the specified filter.
+
+```bash
+db.collection.updateOne(<filter>, <update>, <alter>)
+```
+
+`$set` updates the existing field, if the field doesn't exists in the document then it creates the same.
+
+```bash
+db.student.updateOne( {name: "Raunak"}, {$set: {age: 19}} )
+```
+
+<br>
+
+### updateMany()
+
+Updates all documents that match a specified filter.
+
+```bash
+db.collection.updateMany(<filter>, <update>, <alter>)
+```
+
+```bash
+db.student.updateMany( {city: "Delhi"}, {$set: {city: "New Delhi"}} )
+```
+
+<br>
+
+### replaceOne()
+
+Replace at most a single document that match a specified filter event through multiple documents may match the specified filter.
+
+```bash
+db.collection.replaceOne(<filter>, <update>, <alter>)
+```
+```bash
+db.student.replaceOne( {name: "Suhani"}, {name: "Suhani" ,city: "New Delhi", age: 20, marks: 100} )
+```
+
+<br>
+
+[Click here](https://www.mongodb.com/docs/manual/tutorial/update-documents-with-aggregation-pipeline/) for more info.
