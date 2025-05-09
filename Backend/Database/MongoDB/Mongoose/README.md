@@ -109,7 +109,7 @@ Mongoose uses **Operation Buffering**
 
 <em>Mongoose lets you start using your models immediately, without waiting for mongoose to establish a connection to MongoDB.</em>
 
-### Find
+# Find
 
 ```js
 User.find({age: {$gt: 19}}).then((res) => {
@@ -135,7 +135,7 @@ User.findById("681bca3ae18355c8283efa3f").then((res) => {
   })
 ```
 
-### Update
+# Update
 
 ```js
 User.updateOne({name: "Suhani"}, {age: 21}).then((res) => {
@@ -145,7 +145,7 @@ User.updateOne({name: "Suhani"}, {age: 21}).then((res) => {
   })
 ```
 
-### Find and Update
+# Find and Update
 
 ```js
 User.findOneAndUpdate({name: "Kevin"}, {name: "Kaivalaya"}, {new: true}).then((res) => {
@@ -163,7 +163,7 @@ User.findByIdAndUpdate("681bca3ae18355c8283efa3f", {name: "Kaivalaya"}, {new: tr
   })
 ```
 
-### Delete
+# Delete
 
 ```js
 User.deleteOne({name: "Raunak"}).then((res) => {
@@ -181,7 +181,7 @@ User.deleteMany({age: 19}).then((res) => {
   }
 ```
 
-### Find and Delete
+# Find and Delete
 
 ```js
 User.findOneAndDelete({name: "Kevin"}).then((res) => {
