@@ -17,10 +17,10 @@ db.student.deleteOne( {name: "Farah"})
 ```bash
 db.collection.deleteMany(<filter>, <option>)
 
-db.student.deleteOne({}) //to delete all documents in the collection
+db.student.deleteMany({}) //to delete all documents in the collection
 ```
 ```bash
-db.student.deleteOne( {city: "Mumbai"})
+db.student.deleteMany( {city: "Mumbai"})
 { acknowledged: true, deletedCount: 2 }
 ```
 
