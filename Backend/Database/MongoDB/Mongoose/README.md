@@ -9,6 +9,11 @@ Table of Contents -
 - [Schema](#schema)
 - [Models](#models)
 - [Insert](#insert)
+- [Find](#find)
+- [Update](#update)
+- [Find and Update](#find-and-update)
+- [Delete](#delete)
+- [Find and Delete](#find-and-delete)
 
 <br>
 
@@ -99,7 +104,97 @@ User.insertMany([
 })
 ```
 
-### NOTE
+#### NOTE
 Mongoose uses **Operation Buffering**
 
 <em>Mongoose lets you start using your models immediately, without waiting for mongoose to establish a connection to MongoDB.</em>
+
+### Find
+
+```js
+User.find({age: {$gt: 19}}).then((res) => {
+    console.log(res);
+  }).catch((err) => {
+    console.log(err);
+  })
+```
+
+```js
+User.findOne({age: {$gt: 19}}).then((res) => {
+    console.log(res);
+  }).catch((err) => {
+    console.log(err);
+  })
+```
+
+```js
+User.findById("681bca3ae18355c8283efa3f").then((res) => {
+    console.log(res);
+  }).catch((err) => {
+    console.log(err);
+  })
+```
+
+### Update
+
+```js
+User.updateOne({name: "Suhani"}, {age: 21}).then((res) => {
+    console.log(res);
+  }).catch((err) => {
+    console.log(err);
+  })
+```
+
+### Find and Update
+
+```js
+User.findOneAndUpdate({name: "Kevin"}, {name: "Kaivalaya"}, {new: true}).then((res) => {
+    console.log(res);
+  }).catch((err) => {
+    console.log(err);
+  })
+```
+
+```js
+User.findByIdAndUpdate("681bca3ae18355c8283efa3f", {name: "Kaivalaya"}, {new: true}).then((res) => {
+    console.log(res);
+  }).catch((err) => {
+    console.log(err);
+  })
+```
+
+### Delete
+
+```js
+User.deleteOne({name: "Raunak"}).then((res) => {
+    console.log(res);
+  }).catch((err) => {
+    console.log(err);
+  })
+```
+
+```js
+User.deleteMany({age: 19}).then((res) => {
+    console.log(res);
+  }).catch((err) => {
+    console.log(err);
+  }
+```
+
+### Find and Delete
+
+```js
+User.findOneAndDelete({name: "Kevin"}).then((res) => {
+    console.log(res);
+  }).catch((err) => {
+    console.log(err);
+  })
+```
+
+```js
+  User.findByIdAndDelete("681bca3ae18355c8283efa3f").then((res) => {
+    console.log(res);
+  }).catch((err) => {
+    console.log(err);
+  })
+```
