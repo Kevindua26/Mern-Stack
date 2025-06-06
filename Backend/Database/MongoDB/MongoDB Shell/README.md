@@ -15,7 +15,7 @@ For setting up thew alias, follow the steps below-
 ### Option 1 
 You go to the path where mongodb shell is installed and then enter 
 ```bash
-mongosh 
+mongosh
 ``` 
 in the terminal/bash.
 
