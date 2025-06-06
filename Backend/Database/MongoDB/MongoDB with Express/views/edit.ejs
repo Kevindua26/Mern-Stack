@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Chat</title>
+</head>
+<body>
+  <h1>Edit you chat: <%= chat._id %></h1>
+  <form action="/chat/<%=chat._id%>?_method=put" method="post">
+    <label>From: <%= chat.from %></label>
+    <br><br>
+    <label for="msg">Edit Message: </label><br>
+    <textarea name="msg" id="msg" rows="6" cols="40"><%= chat.msg %></textarea>
+    <br><br>
+    <label>To: <%= chat.to %></label>
+    <br><br>
+    <label>On <%= chat.created_at.toString().split(" ").slice(0, 4).join("-") %> at <%= chat.created_at.toString().split(" ")[4] %> </label>
+    <br><br>
+    <button>Edit</button>
+  </form>
+</body>
+</html>
